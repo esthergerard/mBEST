@@ -441,7 +441,7 @@ class mBEST:
         return paths, intersection_path_id
 
     def _compute_radii(self, paths):
-        path_radii = np.round(self.dist_img).astype(np.int)
+        path_radii = np.round(self.dist_img).astype(np.int64)
         path_radii_avgs = [int(np.round(self.dist_img[path[:, 0], path[:, 1]].mean())) for path in paths]
         return path_radii, path_radii_avgs
 
